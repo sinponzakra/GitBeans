@@ -5,11 +5,13 @@ class Machine {
 
     private $id;
     private $marque;
+    private $reference;
     private $salle;
 
-    function __construct($id, $marque, $salle) {
+    function __construct($id, $marque, $reference, $salle) {
         $this->id = $id;
         $this->marque = $marque;
+        $this->reference = $reference;
         $this->salle = $salle;
     }
 
@@ -36,7 +38,16 @@ class Machine {
     function setMarque($marque) {
         $this->marque = $marque;
     }
+    
+    function getReference() {
+        return $this->reference;
+    }
 
+    function setReference($reference) {
+        $this->reference = $reference;
+    }
+
+    
     public function __toString() {
         return $this->marque;
     }
