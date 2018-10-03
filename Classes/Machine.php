@@ -1,18 +1,27 @@
 <?php
 
-
 class Machine {
 
     private $id;
     private $marque;
     private $reference;
     private $salle;
+    private $voltage;
 
-    function __construct($id, $marque, $reference, $salle) {
+    function __construct($id, $marque, $reference, $salle, $voltage) {
         $this->id = $id;
         $this->marque = $marque;
         $this->reference = $reference;
         $this->salle = $salle;
+        $this->voltage = $voltage;
+    }
+
+    function getVoltage() {
+        return $this->voltage;
+    }
+
+    function setVoltage($voltage) {
+        $this->voltage = $voltage;
     }
 
     function getSalle() {
@@ -38,7 +47,7 @@ class Machine {
     function setMarque($marque) {
         $this->marque = $marque;
     }
-    
+
     function getReference() {
         return $this->reference;
     }
@@ -47,7 +56,6 @@ class Machine {
         $this->reference = $reference;
     }
 
-    
     public function __toString() {
         return $this->marque;
     }
