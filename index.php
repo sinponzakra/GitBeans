@@ -12,12 +12,11 @@
         $s1 = new Salle(1, "Salle 1");
         $s2 = new Salle(2,"Salle 2");
         
-        $m1 =new Machine(1, "Dell", $s1);
-        $m2 =new Machine(2, "HP", $s1);
-        $m3 =new Machine(3, "Asus",$s2);
+        $m1 =new Machine(1, "Dell","fe445fe", $s1);
+        $m2 =new Machine(2, "HP","ff45d12", $s1);
+        $m3 =new Machine(3, "Asus","hjkdf546",$s2);
         
-        $ss = Array($s1, $s2);
-      
+        $ss = Array($s1, $s2);    
         
         $mm = array($m1, $m2, $m3);
 
